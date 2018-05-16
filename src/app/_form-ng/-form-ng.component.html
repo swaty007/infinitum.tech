@@ -1,0 +1,15 @@
+<form id="form" (ngSubmit)="Form.form.valid && onSumbit(Form.form.value); Form.reset()" #Form="ngForm">
+
+  <input type="text" name="name" class="form-control" placeholder="Имя" required [(ngModel)]="newName" />
+
+  <input type="text" name="email" class="form-control" placeholder="Email" required [(ngModel)]="newEmail" email />
+
+  <input type="text" name="number" class="form-control" placeholder="Телефон" required [(ngModel)]="newNumber" pattern="^((8|\+3)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" />
+
+  <textarea name="message" class="form-control" placeholder="Комментарий" required [(ngModel)]="newComment"></textarea>
+
+  <button class="btn-send-message" [disabled]="Form.form.invalid">ОСТАВИТЬ ЗАЯВКУ</button>
+
+  <div *ngIf="connect" id="ansver_server"><p>{{receivedUser}}</p></div>
+
+</form>

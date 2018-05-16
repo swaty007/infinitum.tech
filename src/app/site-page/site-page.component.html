@@ -1,0 +1,63 @@
+<div class="our-site clearfix">
+
+  <div class="container">
+    <div class="row">
+      <a [routerLink]="['../../']" class="icon-back glyphicon glyphicon-circle-arrow-left" [scrollTo]="true"></a>
+    </div>
+  </div>
+
+
+  <div *ngIf="site?.name" class="btn-js-color">
+    <h1>Сайт Компании {{site?.name}}</h1>
+    <img class="logo_" src="img/logo-black.png" alt="">
+  </div>
+<!-- ? проверяет существует ли вообще переменная и дает время на запрос HTTP-->
+
+  <p class="text-center">Выполненые работы</p>
+  <p class="text-center">{{siteInfo?.do_works}}</p>
+
+
+  <div class="computer-version">
+    <h2>{{ site?.design == true ? 'Шаблон сайта' : 'компьютерная версия сайта'}}</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="computers-wrap">
+            <div class="computer-wrap back left" *ngIf="site?.design == false">
+              <img src="img/sites/{{site?.img}}/comp.png" alt="">
+            </div>
+          <div class="computer-wrap" [class.landing]="site?.design == true">
+            <img *ngIf="site?.design == false" src="img/sites/{{site?.img}}/comp.png" alt="">
+            <img *ngIf="site?.design == true" src="img/sites/{{site?.img}}" alt="">
+          </div>
+            <div class="computer-wrap back right" *ngIf="site?.design == false">
+              <img src="img/sites/{{site?.img}}/comp.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <a *ngIf="site?.link?.length > 0" class="visit" href="{{site?.link}}" target="_blank">Посетить Сайт</a>
+
+
+
+  <div class="desktop-version" *ngIf="site?.design == false">
+    <h2>мобильная и планшетная версия сайта</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="desktop-wrap">
+            <img src="img/sites/{{site?.img}}/desktop.png" alt="">
+          </div>
+          <div class="mobile-wrap">
+            <img src="img/sites/{{site?.img}}/mobile.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

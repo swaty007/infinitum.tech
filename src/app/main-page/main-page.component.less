@@ -1,0 +1,38 @@
+@import '../../css/main';
+.contact-us {
+  background-image: url(../../img/layers/ContactUsBg.png);
+  background-size: cover;
+  .form {
+    width: 100%;
+    padding: 40px 50px;
+    margin: 50px 0;
+    box-shadow: 0 0 46px rgba(9, 24, 28, 0.5);
+    background-color: @color-1;
+  }
+  h2 {
+    color: @color-2;
+    font-family: @font-1b;
+    font-size: 42px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  p {
+    color: @color-3;
+    font-family: @font-1;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .logo_ {
+    width: 66px;
+    height: 30px;
+    margin: 20px auto;
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .contact-us h2 {
+    font-size: 31px;
+  }
+}

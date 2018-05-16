@@ -1,0 +1,41 @@
+@import '../../css/main';
+#form {
+  text-align: center;
+  input,textarea {
+    color: @color-3;
+    font-family: @font-1;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #e4e4e4;
+    margin: 18px 0;
+    margin-top: 34px;
+  }
+  textarea {
+    min-height: 120px;
+  }
+  .btn-send-message {
+    box-shadow: inset 0 -4px 0 rgba(9, 24, 28, 0.25);
+    background: url(../../img/icon/sent-mail.png) 92% no-repeat @color-2;
+    padding: 12px 45px 12px 30px;
+    color: @color-1;
+    font-family: @font-1;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.7s all;
+    border:1px solid transparent;
+    cursor: pointer;
+    &:hover {
+      color: @color-2;
+      border-color: @color-2;
+      background-color: @color-1;
+      box-shadow: inset -1px -1px 14px 0px rgba(9, 24, 28, 0.25);
+    }
+  }
+  .has-error {
+    border: 1px solid #800713;
+  }
+  .has-success {
+    border: 1px solid #17800b;
+  }
+}

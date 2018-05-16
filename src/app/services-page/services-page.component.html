@@ -1,0 +1,39 @@
+<div class="our-services clearfix">
+  <h1 [scrollTo]="0 == id">Наши Услуги</h1>
+  <img class="logo_" src="img/logo-black.png" alt="">
+
+
+
+
+
+  <div class="container" *ngIf="offers?.length > 0">
+    <div class="row">
+
+      <div class="col-md-12" *ngFor="let offer of offers">
+        <div class="offer-block clearfix" id="{{offer.id}}"  [scrollTo]="offer.id == id">
+          <div class="img-block clearfix">
+            <img src="{{offer.img}}" alt="site_{{offer.id}}_image">
+          </div>
+          <div class="description-block">
+            <h2>{{offer.title}}</h2>
+            <p class="desc">{{offer.desc}}</p>
+            <p class="text">{{offer.text}}</p>
+            <button (click)="openPopup()" class="btn-submit-offer">оставить заявку</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="modal" [class.on]="modal" id="overlay" (click)="closePopup()"></div>
+<div *ngIf="modal" [class.on]="modal" class="modalForm">
+  <span class="modal_close" (click)="closePopup()">X</span>
+  <h2>Заполните анкету</h2>
+  <p>Мы свяжемся с вами в ближайшее время</p>
+  <img class="logo_" src="img/logo-black.png" alt="">
+  <app--form-ng></app--form-ng>
+</div>
+

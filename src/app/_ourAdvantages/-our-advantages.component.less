@@ -1,0 +1,61 @@
+@import '../../css/main';
+.our-advantages {
+  background-color: @color-1;
+  width:100%;
+  padding-bottom: 55px;
+  h2 {
+    color: @color-2;
+    font-family: @font-1b;
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  .logo_ {
+    width: 66px;
+    height: 30px;
+    margin: 20px auto;
+    display: block;
+  }
+  .item-block {
+    text-align: center;
+    box-shadow: 0 0 46px rgba(9, 24, 28, 0.5);
+    background-color: @color-1;
+    padding: 60px 10px 50px 10px;
+    margin-top: 18px;
+    h3 {
+      color: @color-2;
+      font-family: @font-1;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+      margin-top: 40px;
+    }
+    p {
+      color: @color-3;
+      font-family: @font-1;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .img-block {
+      width: 203px;
+      height: 203px;
+      border-radius: 120px;
+      background-color: @color-2;
+      line-height: 203px;
+      margin: 0 auto;
+      img {
+        width: 116px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .our-advantages h2 {
+    font-size: 31px;
+  }
+}

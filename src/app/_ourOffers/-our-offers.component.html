@@ -1,0 +1,20 @@
+<div class="our-offers">
+  <div class="container-fluid" *ngIf="offers?.length > 0">
+    <div class="row">
+
+      <div class="col-md-4 col-lg-2 col-sm-4 loop" *ngFor="let offer of offers">
+        <a class="offer-block js-heigth" [routerLink]="['Services', offer.id ]">
+          <div class="offer-wrap-360">
+            <div class="offer-content">
+              <p>{{offer.title}}</p>
+            </div>
+            <div class="offer-content">
+              <p>{{offer.desc}}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>

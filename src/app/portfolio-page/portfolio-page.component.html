@@ -1,0 +1,21 @@
+<div class="our-portfolio clearfix" *ngIf="sites?.length > 0" [scrollTo]="true">
+
+  <div class="btn-js-color">
+    <h2>Наше Портфолио</h2>
+    <img class="logo_" src="img/logo-black.png" alt="">
+  </div>
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-4" *ngFor="let site of sites">
+      <a class="sites-item" [routerLink]="['site', site.id ]">
+        <img *ngIf="site.design == false" src="img/sites/{{site.img}}/comp.png" alt="">
+        <img *ngIf="site.design == true" src="img/sites/{{site.img}}" alt="">
+        <p class="textHover">{{site.title}}<span>{{site.name}}</span></p>
+      </a>
+      <!--<a href="{{site.link}}"></a>-->
+    </div>
+
+  </div>
+</div>
+</div>
